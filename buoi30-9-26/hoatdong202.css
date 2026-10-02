@@ -1,0 +1,95 @@
+/* hoatdong202.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Căn giữa toàn bộ giao diện, dùng tông màu tối sang trọng */
+body {
+    background-color: #0f172a; 
+    font-family: 'Inter', sans-serif;
+    color: #f8fafc;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Áp dụng hiệu ứng xuất hiện mượt mà cho khối bao ngoài */
+.skills-wrapper {
+    text-align: center;
+    animation: fadeInUp 1s ease-out forwards;
+    padding: 20px;
+}
+
+/* Tiêu đề in hoa, gradient, đổ bóng nhẹ */
+.skills-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #38bdf8, #c084fc); /* Gradient xanh mờ đến tím */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+
+/* Container dùng Flexbox kết hợp Glassmorphism */
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    
+    max-width: 800px;
+    padding: 40px;
+    
+    /* Hiệu ứng kính mờ Glassmorphism */
+    background: rgba(255, 255, 255, 0.03); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Viền mờ */
+    border-radius: 16px; /* Bo góc */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Các thẻ kỹ năng - Pill Tag */
+.skill-item {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #e2e8f0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 50px; /* Bo tròn hai đầu */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+}
+
+/* Hiệu ứng tương tác Hover */
+.skill-item:hover {
+    transform: translateY(-5px); /* Trượt nhẹ lên trên */
+    background: linear-gradient(135deg, #38bdf8, #818cf8); /* Gradient nổi bật */
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4); /* Phát sáng nhẹ */
+}
+
+/* Animation khi tải trang */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

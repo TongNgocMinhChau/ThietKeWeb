@@ -1,0 +1,22 @@
+/* Đặt một chút padding cho body để dễ nhìn */
+body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    margin: 0;
+}
+
+/* Container thiết lập CSS Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột có kích thước bằng nhau (1 phần / phân số) */
+    gap: 20px;                             /* Khoảng cách giữa các cột và hàng là 20px */
+}
+
+/* Các thẻ con bên trong lưới */
+.grid-item {
+    background-color: #e0e0e0; /* Màu nền xám nhạt */
+    border-radius: 10px;       /* Bo góc 10px */
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
