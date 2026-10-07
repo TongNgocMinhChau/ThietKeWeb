@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #050510;
+
+    font-family: Arial, sans-serif;
+}
+
+/* Khung chứa */
+.container {
+    text-align: center;
+}
+
+/* Chữ */
+.typing-text {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+
+    border-right: 4px solid #ffffff;
+
+    font-size: 40px;
+    font-weight: bold;
+
+    /* Màu Galaxy */
+    background: linear-gradient(
+        90deg,
+        #ff00cc,
+        #7a5cff,
+        #00d9ff,
+        #ff00cc
+    );
+
+    background-size: 300% 100%;
+background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation:
+        typing 4s steps(30) infinite alternate,
+        galaxy 4s linear infinite,
+        cursor 0.7s step-end infinite;
+}
+
+/* Hiệu ứng tự gõ */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    70% {
+        width: 30ch;
+    }
+
+    100% {
+        width: 30ch;
+    }
+}
+
+/* Hiệu ứng màu Galaxy chuyển động */
+@keyframes galaxy {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Hiệu ứng con trỏ nhấp nháy */
+@keyframes cursor {
+    0%,
+    100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
+}

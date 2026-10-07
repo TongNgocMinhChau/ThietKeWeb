@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AOS Animation</title>
+
+    <!-- AOS CSS CDN -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="section section-1" data-aos="fade-up">
+        <h1>Trang chủ</h1>
+        <p>Cuộn xuống để xem hiệu ứng.</p>
+    </section>
+
+    <section class="section section-2" data-aos="fade-left">
+        <h1>Giới thiệu</h1>
+        <p>Phần này xuất hiện từ bên trái.</p>
+    </section>
+
+    <section class="section section-3" data-aos="zoom-in">
+        <h1>Sản phẩm</h1>
+        <p>Phần này phóng to khi cuộn tới.</p>
+    </section>
+
+    <section class="section section-4" data-aos="fade-right">
+        <h1>Liên hệ</h1>
+        <p>Phần này xuất hiện từ bên phải.</p>
+    </section>
+
+
+    <!-- AOS JavaScript CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Khởi tạo AOS -->
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
+</body>
+</html>

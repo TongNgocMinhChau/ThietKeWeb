@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tuyển sinh Đại học Lạc Hồng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #5b8c4b;
+      --color-secondary: #b45b35;
+      --color-text-primary: #26312b;
+      --color-text-secondary: #8aa695;
+      --color-text-muted: #7c867f;
+      --color-background: #f2f5ef;
+      --color-surface: #e8eae7;
+      --spacing-0: 0;
+      --spacing-10: 10px;
+      --spacing-14: 14px;
+      --spacing-18: 18px;
+      --spacing-20: 20px;
+      --spacing-24: 24px;
+      --spacing-28: 28px;
+      --spacing-32: 32px;
+      --spacing-48: 48px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: var(--spacing-0);
+      font-family: "Roboto", sans-serif;
+      color: var(--color-text-primary);
+      background: var(--color-background);
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--spacing-48) var(--spacing-24);
+    }
+
+    .admissions {
+      width: min(100%, 1120px);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: var(--spacing-48);
+      margin-bottom: var(--spacing-32);
+    }
+
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: 340px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .eyebrow {
+      margin: var(--spacing-0) var(--spacing-0) var(--spacing-14);
+      color: var(--color-secondary);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 540px;
+      margin: var(--spacing-0);
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 1.08;
+    }
+
+    .intro {
+      max-width: 480px;
+      margin: var(--spacing-18) var(--spacing-0) var(--spacing-0);
+      color: var(--color-text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--spacing-20);
+    }
+
+    .card {
+      min-height: 150px;
+      padding: var(--spacing-24);
+      border-radius: 10px;
+      background: var(--color-surface);
+      border-top: 3px solid var(--color-primary);
+      transition: transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1),
+        box-shadow 260ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(85, 119, 100, 0.2);
+    }
+
+    .card h2 {
+      margin: var(--spacing-0) var(--spacing-0) var(--spacing-10);
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      margin: var(--spacing-0);
+      color: var(--color-text-muted);
+      line-height: 1.55;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .services-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 767px) {
+      .container {
+        padding: var(--spacing-28) var(--spacing-18);
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-24);
+      }
+
+      .hero-image {
+        height: 230px;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .services-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="admissions">
+      <section class="hero" aria-labelledby="page-title">
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1400&q=85"
+          alt="Ảnh minh họa khuôn viên trường đại học"
+        >
+        <div class="hero-copy">
+          <p class="eyebrow">Chọn hôm nay, vững tương lai</p>
+          <h1 id="page-title">Tuyển sinh Đại học Lạc Hồng</h1>
+          <p class="intro">Khám phá ngành học phù hợp, phát triển thế mạnh của bạn và sẵn sàng cho hành trình đại học.</p>
+        </div>
+      </section>
+
+      <section class="services-container" aria-label="Thông tin tuyển sinh">
+        <article class="card">
+          <h2>Ngành học</h2>
+          <p>Tìm hiểu các lựa chọn học tập theo sở thích và định hướng nghề nghiệp.</p>
+        </article>
+        <article class="card">
+          <h2>Học bổng</h2>
+          <p>Cập nhật thông tin học bổng và chính sách hỗ trợ dành cho sinh viên.</p>
+        </article>
+        <article class="card">
+          <h2>Xét tuyển</h2>
+          <p>Chuẩn bị hồ sơ và theo dõi thông tin xét tuyển cho mùa tuyển sinh.</p>
+        </article>
+        <article class="card">
+          <h2>Hỗ trợ sinh viên</h2>
+          <p>Tìm hiểu các hoạt động đồng hành trong quá trình học tập và phát triển.</p>
+        </article>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

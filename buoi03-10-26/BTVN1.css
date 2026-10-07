@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 50px;
+}
+
+/* Nút Liên hệ */
+.contact-button {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 80px;
+    height: 80px;
+
+    background-color: #3498db;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    /* Hiệu ứng phập phồng */
+    animation: pulse 1.5s infinite;
+}
+
+/* Animation pulse */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Hiệu ứng khi rê chuột */
+.contact-button:hover {
+    background-color: #217dbb;
+}
